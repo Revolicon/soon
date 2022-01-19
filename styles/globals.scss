@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  @apply min-h-full h-full;
+}
+body {
+  @apply bg-black min-h-full h-full;
+  letter-spacing: -0.2px;
+}
+#__next {
+  @apply min-h-full h-full;
+}
+.circle {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+
+  @keyframes circle {
+    from {
+      transform: translateY(-60%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  &__inner {
+    position: absolute;
+    width: 1920px;
+    height: 100vh;
+    transform: translateY(-60%);
+    opacity: 0;
+    animation: circle 2s .4s cubic-bezier(0.6,0.6,0,1);
+    animation-fill-mode: both;
+    transition: all 1650ms ease;
+
+    img {
+      position: absolute;
+      top: -1080px;
+      width: 1920px;
+      height: 1920px;
+      display: block;
+      object-fit: cover;
+      animation: rotating 40s ease infinite;
+    }
+  }
+  &__noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
