@@ -1,4 +1,36 @@
 .waitlist {
-  @apply flex flex-col w-full p-6 rounded-3xl w-full border border-white/[.1] backdrop-blur-[25px] gap-4;
+  @apply flex flex-col w-full p-6 rounded-3xl w-full border border-white/[.1] backdrop-blur-[25px] gap-6;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), rgba(255, 255, 255, 0.05);
+
+  &__form {
+    @apply
+      flex
+      p-1 pl-0
+      h-[52px]
+      overflow-hidden
+      rounded-xl
+      ring-1 ring-white ring-opacity-10 ring-inset
+      bg-white bg-opacity-5
+      transition-all duration-300
+      focus-within:ring-opacity-25;
+
+    input {
+      @apply
+        flex-1
+        pl-6 px-3
+        bg-transparent
+        outline-none focus:outline-none
+        text-sm leading-6 text-white placeholder:text-white/[.5];
+
+      letter-spacing: -0.2px;
+    }
+    button {
+      @apply
+        h-full w-11
+        rounded-[10px]
+        flex items-center justify-center
+        transition-all duration-300
+        bg-white bg-opacity-0 hover:bg-opacity-5;
+    }
+  }
 }

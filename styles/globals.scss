@@ -6,8 +6,15 @@ html {
   @apply min-h-full h-full;
 }
 body {
-  @apply bg-black min-h-full h-full;
+  @apply bg-black min-h-full h-full text-white;
   letter-spacing: -0.2px;
+
+  font-family: 'Inter', sans-serif;
+  font-feature-settings: 'ss01' on, 'ss03' on;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 #__next {
   @apply min-h-full h-full;
