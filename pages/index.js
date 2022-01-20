@@ -11,7 +11,10 @@ function Content() {
           alt="Revolicon Logo"
           width={178}
           height={116}
+          loading="eager"
           draggable={false}
+          unoptimized={true}
+          quality={100}
         />
       </div>
       <div
@@ -129,9 +132,9 @@ function Circle() {
           <Image
             src="/circle.jpg"
             alt="Circle"
-            loading="eager"
             width={1920}
             height={1920}
+            loading="eager"
             draggable={false}
             unoptimized={true}
             quality={100}
