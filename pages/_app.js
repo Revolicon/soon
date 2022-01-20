@@ -13,7 +13,9 @@ function App({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({
       duration: 2000,
-      easing: "smooth"
+      easing: "smooth",
+      once: true,
+      mirror: true
     });
     AOS.refresh();
   }, []);

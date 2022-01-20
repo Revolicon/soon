@@ -81,6 +81,7 @@ function Creators() {
       className="flex items-center gap-3"
       data-aos="fade-up"
       data-aos-delay={1700}
+      data-aos-anchor="body"
     >
       <CreatorsItem link="https://twitter.com/emrhnugrl" badge="Designer" name="Emirhan Ugurlu"/>
       <span className="text-white text-opacity-25">✦</span>

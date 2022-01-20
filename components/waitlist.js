@@ -44,6 +44,7 @@ export default function Waitlist() {
       className={style.waitlist}
       data-aos="fade-up"
       data-aos-delay={1400}
+      data-aos-anchor="body"
     >
       <div className="flex flex-col text-base text-white">
         <div className="font-medium">Join the waitlist</div>
