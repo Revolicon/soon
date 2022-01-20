@@ -16,17 +16,27 @@ export default function Waitlist() {
 
     const token = await recaptchaRef.current.executeAsync();
 
-    axios.post('/api/join', { token, email: event.target.email.value })
-      .then(response => {
-        setResult(response.data);
-        setLoading(false);
-        recaptchaRef.current.reset();
+    if (!event.target.email.value) {
+      setLoading(false)
+      setResult({
+        success: false,
+        message: "Please enter your email address."
       })
-      .catch(error => {
-        setResult(error.response.data);
-        setLoading(false);
-        recaptchaRef.current.reset();
-      });
+    } else {
+      axios.post('/api/join', { token, email: event.target.email.value })
+        .then(response => {
+          setResult(response.data);
+          setLoading(false);
+        })
+        .catch(error => {
+          setResult({
+            success: false,
+            message: "System error! Please try again later."
+          });
+          setLoading(false);
+        });
+    }
+    recaptchaRef.current.reset();
   }
 
   return (

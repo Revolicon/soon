@@ -12,7 +12,7 @@ function create(req, res) {
   database('Mails').select({
     filterByFormula: `{Email} = "${req.body.email}"`
   }).all(function(queryError, queryResult) {
-    if (queryError) res.status(200).json({ success: false, message: "System error!", queryError })
+    if (queryError) res.status(200).json({ success: false, message: "System error! Please try again later.", queryError })
     if (queryResult.length > 0) {
       res.status(200).json({ success: false, message: 'Email already registered.' })
     } else {
@@ -23,7 +23,7 @@ function create(req, res) {
         }
       }], function(createError, createResult) {
         if (createError) {
-          res.status(200).json({ success: false, message: "System error!", createError })
+          res.status(200).json({ success: false, message: "System error! Please try again later.", createError })
         } else {
           res.status(200).json({ success: true, result: createResult?.[0]?.fields })
         }
