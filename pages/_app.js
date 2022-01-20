@@ -23,6 +23,8 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover" />
+
         <title>Revolicon - Beautifully Crafted Open Source Icons</title>
         <meta name="title" content="Revolicon - Beautifully Crafted Open Source Icons" />
         <meta name="description" content="Revolicon is an open-source icon library. It is designed for consistency and accessibility. The icons are carefully crafted for you to work seamlessly." />
