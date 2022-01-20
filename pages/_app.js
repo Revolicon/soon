@@ -1,10 +1,22 @@
+import 'aos/dist/aos.css';
 import '../styles/globals.scss'
 import Head from "next/head";
 
 import useWindowSize from "../hooks/useWindowDimensions";
+import {useEffect} from "react";
+
+import AOS from "aos";
 
 function App({ Component, pageProps }) {
   const { height, width } = useWindowSize();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      easing: "smooth"
+    });
+    AOS.refresh();
+  }, []);
 
   return (
     <>

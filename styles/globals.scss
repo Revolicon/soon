@@ -19,3 +19,10 @@ body {
 #__next {
   @apply min-h-full h-full;
 }
+
+[data-aos][data-aos-easing="smooth"] {
+  transition-timing-function: cubic-bezier(0.6,0.6,0,1);
+}
+[data-aos=fade-up] {
+  transform: translate3d(0,40px,0);
+}

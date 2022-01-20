@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image from 'next/image'
 
 import style from '../styles/home.module.scss'
@@ -6,7 +5,7 @@ import style from '../styles/home.module.scss'
 function Content() {
   return (
     <div className="flex flex-col items-center gap-4 text-center">
-      <div className="flex">
+      <div className="flex" data-aos="fade-up">
         <Image
           src="/logo.svg"
           alt="Revolicon Logo"
@@ -15,8 +14,18 @@ function Content() {
           draggable={false}
         />
       </div>
-      <div className="text-white text-opacity-75 text-lg leading-6">Beautifully crafted open source icons.</div>
-      <div className="flex items-center gap-3">
+      <div
+        className="text-white text-opacity-75 text-lg leading-6"
+        data-aos="fade-up"
+        data-aos-delay={300}
+      >
+        Beautifully crafted open source icons.
+      </div>
+      <div
+        className="flex items-center gap-3"
+        data-aos="fade-up"
+        data-aos-delay={800}
+      >
         <a href="https://twitter.com/revolicon" className="inline-flex items-center justify-center px-5 py-2 bg-white rounded-full text-black text-base font-medium leading-6 select-none">Follow us</a>
         <ContentSocial/>
       </div>
@@ -64,7 +73,11 @@ function ContentSocial() {
 
 function Waitlist() {
   return (
-    <div className={style.waitlist}>
+    <div
+      className={style.waitlist}
+      data-aos="fade-up"
+      data-aos-delay={1400}
+    >
       <div className="flex flex-col text-base text-white">
         <div className="font-medium">Join the waitlist</div>
         <div className="text-white text-opacity-50">Sign up to be one of the first to use Revolicon.</div>
@@ -83,7 +96,11 @@ function Waitlist() {
 
 function Creators() {
   return (
-    <div className="flex items-center gap-3">
+    <div
+      className="flex items-center gap-3"
+      data-aos="fade-up"
+      data-aos-delay={1700}
+    >
       <CreatorsItem link="https://twitter.com/emrhnugrl" badge="Designer" name="Emirhan Ugurlu"/>
       <span className="text-white text-opacity-25">✦</span>
       <CreatorsItem link="https://twitter.com/berkpw" badge="Developer" name="Berk Altıok"/>
@@ -110,7 +127,7 @@ function Circle() {
       <div className={style.circle__inner}>
         <div className={style.circle__image}>
           <Image
-            src="/circle.png"
+            src="/circle.jpg"
             alt="Circle"
             loading="eager"
             width={1920}
