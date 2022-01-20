@@ -51,7 +51,7 @@ export default function Waitlist() {
       </div>
       <form onSubmit={handleSubmit}>
         <label className={style.waitlist__form}>
-          <input type="email" name="email" id="email" autocomplete="email" placeholder="Email adress" disabled={loading || result?.success} />
+          <input type="email" name="email" id="email" autoComplete="email" placeholder="Email adress" disabled={loading || result?.success} />
           <button type="submit" className={[
             loading || result?.success ? "hover:bg-transparent cursor-default" : "",
             result?.success ? "pointer-events-none" : ""
