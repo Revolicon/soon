@@ -1,7 +1,11 @@
 import '../styles/globals.scss'
 import Head from "next/head";
 
+import useWindowSize from "../hooks/useWindowDimensions";
+
 function App({ Component, pageProps }) {
+  const { height, width } = useWindowSize();
+
   return (
     <>
       <Head>

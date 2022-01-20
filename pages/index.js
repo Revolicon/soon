@@ -63,7 +63,6 @@ function ContentSocial() {
 }
 
 function Waitlist() {
-  console.log(style)
   return (
     <div className={style.waitlist}>
       <div className="flex flex-col text-base text-white">
@@ -105,21 +104,40 @@ function CreatorsItem({ name, link, badge }) {
   )
 }
 
-export default function Home() {
+function Circle() {
   return (
-    <div className="w-full h-full flex justify-center items-center overflow-hidden px-4 relative overflow-hidden">
-      <div className="circle select-none pointer-events-none">
-        <div className="circle__inner">
-          <img src="/circle.png" alt="Circle"/>
-        </div>
-      </div>
-      <div className="max-w-[552px] w-full flex flex-col items-center gap-[72px]">
-        <Content/>
-        <div className="flex flex-col items-center gap-6 w-full">
-          <Waitlist/>
-          <Creators/>
+    <div className={style.circle}>
+      <div className={style.circle__inner}>
+        <div className={style.circle__image}>
+          <Image
+            src="/circle.png"
+            alt="Circle"
+            loading="eager"
+            width={1920}
+            height={1920}
+            draggable={false}
+            unoptimized={true}
+            quality={100}
+          />
         </div>
       </div>
     </div>
+  )
+}
+
+export default function Home() {
+  return (
+    <>
+      <Circle/>
+      <div className="w-full h-full flex flex-col justify-center items-center overflow-hidden px-4 relative overflow-hidden">
+        <div className="max-w-[552px] w-full flex flex-col items-center gap-[72px]">
+          <Content/>
+          <div className="flex flex-col items-center gap-6 w-full">
+            <Waitlist/>
+            <Creators/>
+          </div>
+        </div>
+      </div>
+    </>
   )
 }

@@ -34,3 +34,52 @@
     }
   }
 }
+.circle {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  min-height: var(--app-height, 100vh);
+  width: var(--app-width, 100%);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  @apply select-none pointer-events-none absolute;
+
+  @keyframes circle {
+    from {
+      transform: translateY(-40%) scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  &__inner {
+    position: absolute;
+    width: 1920px;
+    height: 100vh;
+    transform: translateY(-40%) scale(0.8);
+    opacity: 0;
+    animation: circle 2s .4s cubic-bezier(0.6,0.6,0,1);
+    animation-fill-mode: both;
+    transition: all 1650ms ease;
+  }
+  &__image {
+    position: absolute;
+    top: -1080px;
+    width: 1920px;
+    height: 1920px;
+    display: block;
+    object-fit: cover;
+    animation: rotating 60s ease infinite;
+  }
+}
