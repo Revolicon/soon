@@ -20,10 +20,12 @@ export default function Waitlist() {
       .then(response => {
         setResult(response.data);
         setLoading(false);
+        recaptchaRef.current.reset();
       })
       .catch(error => {
         setResult(error.response.data);
         setLoading(false);
+        recaptchaRef.current.reset();
       });
   }
 
@@ -40,7 +42,10 @@ export default function Waitlist() {
       <form onSubmit={handleSubmit}>
         <label className={style.waitlist__form}>
           <input type="email" name="email" placeholder="Email adress" disabled={loading || result?.success} />
-          <button type="submit" className={loading || result?.success ? "hover:bg-transparent cursor-default" : ""}>
+          <button type="submit" className={[
+            loading || result?.success ? "hover:bg-transparent cursor-default" : "",
+            result?.success ? "pointer-events-none" : ""
+          ].join(" ")}>
             {(!loading && !result?.success) && (
               <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.6655 2.62836C10.8707 2.44363 11.1869 2.46027 11.3716 2.66552L15.8716 7.66552C16.0427 7.85567 16.0427 8.14433 15.8716 8.33449L11.3716 13.3345C11.1869 13.5397 10.8707 13.5564 10.6655 13.3717C10.4602 13.1869 10.4436 12.8708 10.6283 12.6655L14.3773 8.5H0.499756C0.223613 8.5 -0.000244141 8.27615 -0.000244141 8C-0.000244141 7.72386 0.223613 7.5 0.499756 7.5H14.3773L10.6283 3.33449C10.4436 3.12923 10.4602 2.81309 10.6655 2.62836Z" fill="white"/>

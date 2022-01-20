@@ -26,3 +26,8 @@ body {
 [data-aos=fade-up] {
   transform: translate3d(0,40px,0);
 }
+.grecaptcha-badge {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -9999;
+}

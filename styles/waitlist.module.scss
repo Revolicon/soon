@@ -17,6 +17,7 @@
     input {
       @apply
       flex-1
+      min-w-0
       pl-6 px-3
       bg-transparent
       outline-none focus:outline-none
@@ -26,6 +27,7 @@
     }
     button {
       @apply
+      flex-none
       h-full w-11
       rounded-[10px]
       flex items-center justify-center
