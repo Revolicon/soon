@@ -6,7 +6,7 @@ import Waitlist from "../components/waitlist";
 function Content() {
   return (
     <div className="flex flex-col items-center gap-4 text-center">
-      <div className="flex pointer-events-none" data-aos="fade-up">
+      <div className="flex pointer-events-none select-none" data-aos="fade-up">
         <Image
           src="/logo.svg"
           alt="Revolicon Logo"

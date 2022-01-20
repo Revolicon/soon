@@ -19,11 +19,34 @@
       flex-1
       min-w-0
       pl-6 px-3
-      bg-transparent
       outline-none focus:outline-none
       text-sm leading-6 text-white placeholder:text-white/[.5];
 
       letter-spacing: -0.2px;
+      background: transparent !important;
+      -webkit-background-clip: text !important;
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        color: #fff;
+        caret-color: white;
+        -webkit-text-fill-color: white;
+        font-size: 0.875rem;
+
+        &::first-line {
+          color: #fff;
+          caret-color: white;
+          font-size: 0.875rem;
+          font-family: 'Inter', sans-serif;
+          font-feature-settings: 'ss01' on, 'ss03' on;
+          font-smoothing: antialiased;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          text-rendering: optimizeLegibility;
+        }
+      }
     }
     button {
       @apply
