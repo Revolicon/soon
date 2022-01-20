@@ -6,7 +6,7 @@ import Waitlist from "../components/waitlist";
 function Content() {
   return (
     <div className="flex flex-col items-center gap-4 text-center">
-      <div className="flex pointer-events-none select-none" data-aos="fade-up">
+      <div className="flex pointer-events-none select-none" data-aos="fade-up" data-aos-anchor="body">
         <Image
           src="/logo.svg"
           alt="Revolicon Logo"
@@ -22,6 +22,7 @@ function Content() {
         className="text-white text-opacity-75 text-lg leading-6"
         data-aos="fade-up"
         data-aos-delay={300}
+        data-aos-anchor="body"
       >
         Beautifully crafted open source icons.
       </div>
@@ -29,6 +30,7 @@ function Content() {
         className="flex items-center gap-3"
         data-aos="fade-up"
         data-aos-delay={800}
+        data-aos-anchor="body"
       >
         <a href="https://twitter.com/revolicon" className="inline-flex items-center justify-center px-5 py-2 bg-white rounded-full text-black text-base font-medium leading-6 select-none">Follow us</a>
         <ContentSocial/>
