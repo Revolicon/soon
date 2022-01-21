@@ -60,11 +60,23 @@ export default function Waitlist() {
       </div>
       <form onSubmit={handleSubmit}>
         <label className={style.waitlist__form}>
-          <input ref={emailRef} type="email" name="email" id="email" autoComplete="email" placeholder="Email adress" disabled={loading || result?.success} />
-          <button type="submit" className={[
-            loading || result?.success ? "hover:bg-transparent cursor-default" : "",
-            result?.success ? "pointer-events-none" : ""
-          ].join(" ")}>
+          <input
+            ref={emailRef}
+            type="email"
+            name="email"
+            id="email"
+            autoComplete="email"
+            placeholder="Email adress"
+            disabled={loading || result?.success}
+            value={(result?.success && result?.message) || emailRef.value}
+          />
+          <button
+            type="submit"
+            className={[
+              loading || result?.success ? "hover:bg-transparent cursor-default" : "",
+              result?.success ? "pointer-events-none" : ""
+            ].join(" ")}
+          >
             {!loading && (
               (!result?.success && <Arrow className="w-4 h-4 text-white" />) ||
               (result?.success && <Check className="w-4 h-4 text-white" />)
