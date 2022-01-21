@@ -14,7 +14,7 @@ function create(req, res) {
   }).all(function(queryError, queryResult) {
     if (queryError) res.status(200).json({ success: false, message: "System error! Please try again later.", queryError })
     if (queryResult.length > 0) {
-      res.status(200).json({ success: false, message: 'Email already registered.' })
+      res.status(200).json({ success: false, message: "Email already registered." })
     } else {
       database('Mails').create([{
         "fields": {
@@ -25,7 +25,7 @@ function create(req, res) {
         if (createError) {
           res.status(200).json({ success: false, message: "System error! Please try again later.", createError })
         } else {
-          res.status(200).json({ success: true, result: createResult?.[0]?.fields })
+          res.status(200).json({ success: true, message: "You have joined the waitlist.", result: createResult?.[0]?.fields })
         }
       });
     }
