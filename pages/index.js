@@ -6,18 +6,7 @@ import Waitlist from "../components/waitlist";
 function Content() {
   return (
     <div className="flex flex-col items-center gap-4 text-center">
-      <div className="flex pointer-events-none select-none" data-aos="fade-up" data-aos-anchor="body">
-        <Image
-          src="/logo.svg"
-          alt="Revolicon Logo"
-          width={178}
-          height={116}
-          loading="eager"
-          draggable={false}
-          unoptimized={true}
-          quality={100}
-        />
-      </div>
+      <ContentLogo/>
       <div
         className="text-white text-opacity-75 text-lg leading-6"
         data-aos="fade-up"
@@ -35,6 +24,22 @@ function Content() {
         <a href="https://twitter.com/revolicon" className="inline-flex items-center justify-center px-5 py-2 bg-white rounded-full text-black text-base font-medium leading-6 select-none">Follow us</a>
         <ContentSocial/>
       </div>
+    </div>
+  )
+}
+function ContentLogo() {
+  return (
+    <div className="flex pointer-events-none select-none" data-aos="fade-up" data-aos-anchor="body">
+      <Image
+        src="/logo.svg"
+        alt="Revolicon Logo"
+        width={178}
+        height={116}
+        loading="eager"
+        draggable={false}
+        unoptimized={true}
+        quality={100}
+      />
     </div>
   )
 }
