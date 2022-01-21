@@ -1,9 +1,12 @@
 import {useRef, useState} from "react";
+import useSound from "use-sound";
+
 import style from "../styles/waitlist.module.scss";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import axios from "axios";
 import { Arrow, Check, Loading } from "/components/icons.js";
+
 
 export default function Waitlist() {
   const recaptchaRef = useRef();
@@ -12,8 +15,11 @@ export default function Waitlist() {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState({});
 
+  const [play, { stop }] = useSound("/success.mp3", { volume: 0.4 });
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+    stop();
     if (!event.target.email.value) {
       emailRef.current.focus();
     } else {
@@ -26,6 +32,8 @@ export default function Waitlist() {
         .then(response => {
           setResult(response.data);
           setLoading(false);
+
+          if (response.data.success) play();
         })
         .catch(error => {
           setResult({
