@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Lottie from "lottie-react";
+import { Dribbble, Github, Twitter } from "../components/icons";
 
 import style from '../styles/home.module.scss'
 import Waitlist from "../components/waitlist";
@@ -47,15 +48,15 @@ function ContentLogo() {
 function ContentSocial() {
   let social = [
     {
-      icon: 'twitter',
+      icon: Twitter,
       url: 'https://twitter.com/revolicon',
     },
     {
-      icon: 'github',
+      icon: Github,
       url: 'https://github.com/revolicon',
     },
     {
-      icon: 'dribbble',
+      icon: Dribbble,
       url: 'https://dribbble.com/revolicon',
     }
   ]
@@ -70,12 +71,9 @@ function ContentSocial() {
           rel="noreferrer"
           className="h-10 w-10 flex items-center justify-center rounded-full transition-all duration-300 bg-white bg-opacity-0 ring-1 ring-white ring-inset ring-opacity-0 hover:ring-opacity-20 hover:bg-opacity-10"
         >
-          <Image
-            src={`/icons/${item.icon}.svg`}
-            alt={item.icon + " Icon"}
-            width={20}
-            height={20}
-            draggable={false}
+          <item.icon
+            width="20"
+            height="20"
           />
         </a>
       ))}
