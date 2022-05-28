@@ -66,7 +66,7 @@ export default function Waitlist() {
             name="email"
             id="email"
             autoComplete="email"
-            placeholder="Email adress"
+            placeholder="Email address"
             disabled={loading || result?.success}
             value={(result?.success && result?.message) || emailRef.value}
           />
