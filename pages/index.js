@@ -91,7 +91,7 @@ function Creators() {
     >
       <CreatorsItem link="https://twitter.com/emrhnugrl" badge="Designer" name="Emirhan Ugurlu"/>
       <span className="text-white text-opacity-25">✦</span>
-      <CreatorsItem link="https://twitter.com/berkpw" badge="Developer" name="Berk Altıok"/>
+      <CreatorsItem link="https://twitter.com/altiokberk" badge="Developer" name="Berk Altıok"/>
     </div>
   )
 }
