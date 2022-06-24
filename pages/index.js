@@ -90,7 +90,7 @@ function Creators() {
       data-aos-anchor="body"
     >
       <CreatorsItem link="https://twitter.com/mike_l_lee" badge="Designer" name="Mike Lee"/>
-      <span className="text-white text-opacity-25">✦</span>
+      <span className="text-white text-opacity-25">✦✦</span>
       <CreatorsItem link="https://twitter.com/mike_l_lee" badge="Developer" name="Mike Lee"/>
     </div>
   )

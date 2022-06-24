@@ -56,7 +56,7 @@ export default function Waitlist() {
     >
       <div className="flex flex-col text-base text-white">
         <div className="font-medium">Join the waitlist</div>
-        <div className="text-white text-opacity-50">Sign up to be one of the first to use Revolicon.</div>
+        <div className="text-white text-opacity-50">Sign up to be one of the first to use the Building Block</div>
       </div>
       <form onSubmit={handleSubmit}>
         <label className={style.waitlist__form}>
