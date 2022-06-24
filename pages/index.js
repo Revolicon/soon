@@ -16,7 +16,7 @@ function Content() {
         data-aos-delay={300}
         data-aos-anchor="body"
       >
-        Beautifully crafted open source icons.
+        Blockchain events and interviews.
       </div>
       <div
         className="flex items-center gap-3"
