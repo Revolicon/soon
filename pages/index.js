@@ -24,7 +24,7 @@ function Content() {
         data-aos-delay={800}
         data-aos-anchor="body"
       >
-        <a href="https://twitter.com/revolicon" className="inline-flex items-center justify-center px-5 py-2 bg-white rounded-full text-black text-base font-medium leading-6 select-none">Follow us</a>
+        <a href="https://twitter.com/mike_l_lee" className="inline-flex items-center justify-center px-5 py-2 bg-white rounded-full text-black text-base font-medium leading-6 select-none">Follow us</a>
         <ContentSocial/>
       </div>
     </div>
@@ -49,7 +49,7 @@ function ContentSocial() {
   let social = [
     {
       icon: Twitter,
-      url: 'https://twitter.com/revolicon',
+      url: 'https://twitter.com/mike_l_lee',
     },
     {
       icon: Github,
@@ -89,9 +89,9 @@ function Creators() {
       data-aos-delay={1700}
       data-aos-anchor="body"
     >
-      <CreatorsItem link="https://twitter.com/emrhnugrl" badge="Designer" name="Emirhan Ugurlu"/>
+      <CreatorsItem link="https://twitter.com/mike_l_lee" badge="Designer" name="Mike Lee"/>
       <span className="text-white text-opacity-25">✦</span>
-      <CreatorsItem link="https://twitter.com/altiokberk" badge="Developer" name="Berk Altıok"/>
+      <CreatorsItem link="https://twitter.com/mike_l_lee" badge="Developer" name="Mike Lee"/>
     </div>
   )
 }
