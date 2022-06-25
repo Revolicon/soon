@@ -132,7 +132,7 @@ export default function Home() {
   return (
     <>
       <Circle/>
-      <div className="flex flex-col justify-center items-center overflow-hidden px-4 relative overflow-hidden mt-24">
+      <div className="flex flex-col justify-center items-center overflow-hidden px-4 relative overflow-hidden mt-18">
         <div className="max-w-[552px] w-full flex flex-col items-center gap-[72px]">
           <Content/>
           <div className="flex flex-col items-center gap-6 w-full mb-12">
