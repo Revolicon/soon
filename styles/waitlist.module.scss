@@ -7,12 +7,14 @@
     flex
     p-1 pl-0
     h-[52px]
+    mt-4
     overflow-hidden
     rounded-xl
     ring-1 ring-white ring-opacity-10 ring-inset
     bg-white bg-opacity-5
     transition-all duration-300
     focus-within:ring-opacity-25;
+    
 
     input {
       @apply

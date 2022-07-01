@@ -39,7 +39,7 @@ function ContentLogo() {
         loop={true}
         className="w-16 h-16"
       />
-      <h1 className="font-mono text-4xl mt-2 font-semibold">Building Block</h1>
+      <h1 className="font-mono text-5xl mt-2 font-semibold">Building Block</h1>
     </div>
   )
 }
@@ -131,6 +131,9 @@ function Circle() {
 export default function Home() {
   return (
     <>
+<div className="fixed top-0 left-0 right-0 text-white border-white/[.1] text-right z-50 backdrop-blur-[15px] bg-gradient-to-t from-black/05 to-white/05">
+Demo
+      </div>
       <Circle/>
       <div className="flex flex-col justify-center items-center overflow-hidden px-4 relative overflow-hidden mt-20">
         <div className="max-w-[552px] w-full flex flex-col items-center gap-[72px]">
