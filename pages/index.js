@@ -89,7 +89,7 @@ function Creators() {
       data-aos-delay={1700}
       data-aos-anchor="body"
     >
-      <CreatorsItem link="https://twitter.com/emrhnugrl" badge="Designer" name="Emirhan Ugurlu"/>
+      <CreatorsItem link="https://twitter.com/eugurlu_" badge="Designer" name="Emirhan Ugurlu"/>
       <span className="text-white text-opacity-25">✦</span>
       <CreatorsItem link="https://twitter.com/altiokberk" badge="Developer" name="Berk Altıok"/>
     </div>
